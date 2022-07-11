@@ -1,7 +1,6 @@
 import streamlit as st
 import qrcode
 from PIL import Image
-import pyzbar
 from pyzbar.pyzbar import decode
 
 st.title('QRコード生成＆読み込みアプリ')
