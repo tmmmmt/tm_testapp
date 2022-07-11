@@ -1,7 +1,6 @@
 import streamlit as st
 import qrcode
 from PIL import Image
-import cv2
 
 st.title('QRコード生成＆読み込みアプリ')
 url = st.text_input('URL入力')
