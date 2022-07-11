@@ -14,4 +14,6 @@ if st.button('QRコード生成'):
     st.image(img)
 if st.button('QRコード読み込み'):
     img = Image.open(fm)
-    st.text(decode(img[0].data.decode('utf-8')))
+    _dc = decode(img)
+    dc = _dc[0].data.decode('utf-8')
+    st.text(dc)
