@@ -1,0 +1,4 @@
+streamlit==1.10.0
+qrcode==7.3.1
+pyzbar==0.1.9
+cv2
