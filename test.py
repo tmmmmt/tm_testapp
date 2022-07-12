@@ -1,7 +1,7 @@
 import streamlit as st
 import cv2
 
-st.title('カメラテスト')
+st.title('カメラテスト'):
 if st.button('カメラ起動'):
 	cap = cv2.VideoCapture(0)
 	while True:
