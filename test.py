@@ -6,7 +6,10 @@ if st.button('カメラ起動'):
 	cap = cv2.VideoCapture(0)
 	while True:
 		ret,frame = cap.read()
-		cv2.imshow('frame',frame)
+		if ret == True:
+			cv2.imshow('frame',frame)
+		else:
+			st.text('カメラが設定されていません')
 
 		if cv2.waitKey(1) & 0xFF == ord('q'):
 			break
