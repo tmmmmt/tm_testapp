@@ -10,6 +10,7 @@ if st.button('カメラ起動'):
 			cv2.imshow('frame',frame)
 		else:
 			st.text('カメラが設定されていません')
+			break
 
 		if cv2.waitKey(1) & 0xFF == ord('q'):
 			break
