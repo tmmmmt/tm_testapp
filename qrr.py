@@ -4,7 +4,7 @@ import streamlit.components.v1 as stc
 stc.html(
     """
     <script src="https://rawgit.com/sitepoint-editors/jsqrcode/master/src/qr_packed.js"></script>
-	<input type=text size=16 placeholder="Tracking Code" class=qrcode-text><label class=qrcode-text-btn><input type=file accept="image/*" capture=environment onchange="openQRCamera(this);" tabindex=-1></label> 
+	<input type=text size=16 placeholder="Tracking Code" class=qrcode-text><label class=qrcode-text-btn><input type=file accept="image/*" capture=environment onclick="return showQRIntro();" onchange="openQRCamera(this);" tabindex=-1></label> 
 	<input type=button value="Go" disabled>
 	<style>
 		input {font-size:14pt}
@@ -28,6 +28,10 @@ stc.html(
 			qrcode.decode(reader.result);
 		};
 		reader.readAsDataURL(node.files[0]);
+		}
+
+		function showQRIntro() {
+		return confirm("カメラを使用してQRコードの写真を撮ります。");
 		}
 	</script>
 	"""
